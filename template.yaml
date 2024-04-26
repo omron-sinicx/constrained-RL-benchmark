@@ -1,0 +1,67 @@
+organization: OMRON SINIC X
+twitter: '@omron_sinicx'
+title: 'Benchmarking Actor-Critic Deep Reinforcement Learning Algorithms for Robotics Control With Action Constraints'
+conference: RA-L (ICRA2024)
+resources:
+  paper: https://ieeexplore.ieee.org/document/10146410
+  code: https://github.com/omron-sinicx/action-constrained-RL-benchmark
+  video: https://www.youtube.com/embed/vyKb2V6EcyA
+description: a benchmark for evaluating action-constrained reinforcement learning algorithms
+url: https://omron-sinicx.github.io/action-constrained-RL-benchmark
+authors:
+  - name: Kazumi Kasaura*
+    affiliation: [1]
+  - name: Shuwa Miura*
+    affiliation: [2]
+    url: https://dosydon.github.io/
+  - name: Tadashi Kozuno
+    affiliation: [1]
+  - name: Ryo Yonetani
+    affiliation: [1]
+    url: https://yonetaniryo.github.io/
+  - name: Kenta Hoshino
+    affiliation: [3]
+    url: http://www.ids.sys.i.kyoto-u.ac.jp/hoshino/index_e.html
+  - name: Yohei Hoshoe
+    affiliation: [4]
+    url: https://sites.google.com/view/hosoe/
+contact_ids: ['github', 'omron'] #=> github issues, kazumi.kasaura@sinicx.com
+affiliations:
+  - OMRON SINIC X Corporation
+  - Manning College of Information and Computer Sciences University of Massachusetts Amherst, work done as an intern at OMRON SINIC X
+  - Graduate School of Informatics, Kyoto University
+  - Graduate School of Engineering, Kyoto University
+meta:
+  - '* Equally contribution'
+bibtex: >
+  # arXiv version
+
+  @article{kasaura2023benchmarking,
+    title={Benchmarking Actor-Critic Deep Reinforcement Learning Algorithms for Robotics Control with Action Constraints},
+    author={Kasaura, Kazumi and Miura, Shuwa and Kozuno, Tadashi and Yonetani, Ryo and Hoshino, Kenta and Hosoe, Yohei},
+    journal={arXiv e-prints},
+    pages={arXiv--2304},
+    year={2023}
+  }
+  
+  # RA-L version
+
+  @article{kasaura2023benchmarking,
+    title={Benchmarking actor-critic deep reinforcement learning algorithms for robotics control with action constraints},
+    author={Kasaura, Kazumi and Miura, Shuwa and Kozuno, Tadashi and Yonetani, Ryo and Hoshino, Kenta and Hosoe, Yohei},
+    journal={IEEE Robotics and Automation Letters},
+    year={2023},
+    publisher={IEEE}
+  }
+  
+overview: |
+  This study presents a benchmark for evaluating action-constrained reinforcement learning (RL) algorithms. In action-constrained RL, each action taken by the learning system must comply with certain constraints. These constraints are crucial for ensuring the feasibility and safety of actions in real-world systems. We evaluate existing algorithms and their novel variants across multiple robotics control environments, encompassing multiple action constraint types. Our evaluation provides the first in-depth perspective of the field, revealing surprising insights, including the effectiveness of a straightforward baseline approach. The benchmark problems and associated code utilized in our experiments are made available online at github.com/omron-sinicx/action-constrained-RL-benchmark for further research and development.
+
+method:
+  - title: Algorithms
+    text: For action-constrained reinforcement learning, mappings of policy outputs to feasible actions are used. We compared several methods for mapping and training.
+
+results:
+  - text: |
+      - Training the critic using pre-projected actions is a good baseline.
+      - The use of optimization layers comes with significant runtime overheads.

@@ -1,0 +1,44 @@
+// reference: uikit/src/scss/variables.scss
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Titillium+Web:wght@600&display=swap');
+
+$global-font-family: 'Titillium Web', 'Raleway', 'Ubuntu';
+// $global-link-color: #DA7D02;
+
+// code block
+$base-pre-background: #f8f8f8;
+$base-pre-border: 0 solid #e5e5e5;
+$base-pre-border-radius: 0;
+$base-pre-font-size: 12px;
+$base-pre-font-family: 'Roboto Mono', monospace;
+
+// sections
+$section-padding-vertical-m: 25px;
+
+// popup
+$tooltip-border-radius: 5px;
+
+// font size
+// $global-font-size: clamp(16px,4vw,16px);
+// $global-medium-font-size: clamp(15px,1vw,18px); // comment-font-size
+
+$omron-color: #1c5eb8;
+
+$theme-color: #fff;
+$theme-color-fg: #333;
+
+$background-secondary-background: $theme-color;
+$button-primary-background: $theme-color;
+$global-primary-background: $omron-color;
+$text-primary-color: $theme-color-fg;
+
+// default variables and mixins
+@import 'uikit/src/scss/variables-theme.scss';
+@import 'uikit/src/scss/mixins-theme.scss';
+
+// import uikit
+@import 'uikit/src/scss/uikit.scss';
+@import '~normalize.css/normalize.css';
+// @import "uikit/src/scss/uikit-theme.scss";
